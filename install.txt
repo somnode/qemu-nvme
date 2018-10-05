@@ -1,0 +1,11 @@
+# Git clone
+git clone https://github.com/OpenChannelSSD/qemu-nvme.git
+git submodule update --init pixman
+
+# Configure
+./configure --enable-kvm --target-list=x86_64-softmmu --enable-linux-aio --disable-werror --disable-xen --prefix=/hdd/qemu-nvme
+
+# Compile & Install
+make
+make install
+
